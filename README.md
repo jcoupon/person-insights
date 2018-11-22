@@ -9,6 +9,7 @@ Steps:
 - query LinkedIn API
 - query news sites (New York Times, bilan.ch) and Twitter: number of articles, most recent
 - query search engine result (see https://pypros.com/search-engine-python/)
+- see other [APIs](https://github.com/toddmotto/public-apis)
 
  
 
@@ -19,6 +20,7 @@ TODOs:
 - if nothing returned, crawl Google
 - creates a list of famous/unknown people (100/100?) to build a model
 - see for most powerful people from Wikipedia or Forbes
+- add a age/year of birth date
 
 
 
