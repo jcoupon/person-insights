@@ -45,9 +45,16 @@ Data sources, Data environment
 
 ### Public exposure
 
+
+wikipedia_presence
+Google_search_narticles
+Google_news_narticles
+Financial_news_narticles
+
 - Wikipedia: Use Wikipedia API with Python package.
 - Twitter: number of followers
 - startpage: number of results
+- Financial news: site:bilan.ch OR site:challenges.fr OR site:forbes.com OR site:ft.com OR site:economist.com
 - news website (BBC, New York Times)
 - blogs
 

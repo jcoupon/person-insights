@@ -6,11 +6,14 @@ import re
 import pandas as pd
 import numpy as np
 import pickle
+import json
 
 import time
 import urllib
 import wikipedia
 import pycountry
+import tweepy
+
 from datetime import date
 from bs4 import BeautifulSoup
 
@@ -34,11 +37,13 @@ class Person(object):
         TODO: add corresponding source of info
         """
 
+        # To add: youtube, facebook, Instagram
         self.__attributes = [
             'firstname', 'lastname', 'middlename',
             'nationality', 'domicile', 'birth_date',
             'famous', 'famous_comment', 'profession',
-            'wealth',  'info', 'linkedin_followers']
+            'wealth',  'info', 'linkedin_followers',
+            'twitter_followers']
 
         for a in self.__attributes:
             setattr(self, a, None)
@@ -56,6 +61,11 @@ class Person(object):
             self.__driver = driver
 
     def get_info_from_Forbes(self):
+        """Method to get info from Forbes. 
+
+        It first goes through the Billionaires list
+        then through the powerful people list.
+        """
 
         search_str = ' '.join([self.firstname, self.lastname])
 
@@ -77,6 +87,7 @@ class Person(object):
 
 
     def get_info_from_Wikipedia(self):
+        """Method to get info from Wikipedia """
 
         result = query_Wikipedia(self.firstname, self.lastname)
 
@@ -90,9 +101,12 @@ class Person(object):
 
         return
 
-
-
     def get_info_from_LinkedIn(self):
+        """Method to get info from LinkedIn.
+        
+        ATTENTION: one need to connect with 
+        an existing account first.
+        """
 
         search_str = ' '.join([self.firstname, self.lastname])
 
@@ -108,6 +122,29 @@ class Person(object):
                 continue    
 
         return
+
+    def get_info_from_Twitter(self):
+        """Method to get info from Twitter.
+        
+        An existing API must be used. 
+        See query_Twitter()  
+        """
+
+        search_str = ' '.join([self.firstname, self.lastname])
+
+        result = query_Twitter(search_str)
+
+        # fill in attribute wherever 
+        # something was found
+        for a in self.__attributes:
+            try:
+                setattr(self, a, result[a])
+            except:
+                continue    
+
+        return
+
+
 
 
     def print_info(self):
@@ -378,6 +415,37 @@ def crawl_linkedin(driver, search_str):
         pass
 
     return results
+
+def query_Twitter(search_str):
+    """Query Twitter API through 
+    tweepy to get numner of followers.
+    
+    The path to Twitter API credentials
+    must be given """
+
+    # load credientials
+    with open(os.path.join(os.environ['HOME'], 'credentials', 'twitter.json')) as file_in:
+        credentials = json.load(file_in)
+
+    # get Twitter API  token
+    auth = tweepy.OAuthHandler(credentials['consumer_key'], credentials['consumer_secret'])
+    auth.set_access_token(credentials['access_token'],credentials['access_token_secret'])
+    api = tweepy.API(auth)
+
+    # search users
+    users = api.search_users(search_str)
+
+    # fill in results
+    results = {}
+    try:
+        # take first result
+        results['twitter_followers'] = users[0].followers_count
+    except:
+        pass
+
+    return results
+
+
 
 
 def persistent_find(driver, xpath_element, click=False, text=True, verbose=False, n_retries=5):
