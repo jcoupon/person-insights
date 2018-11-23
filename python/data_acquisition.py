@@ -43,7 +43,7 @@ class Person(object):
             'nationality', 'domicile', 'birth_date',
             'famous', 'famous_comment', 'profession',
             'wealth',  'info', 'linkedin_followers',
-            'twitter_followers']
+            'twitter_followers', 'wikipedia_presence']
 
         for a in self.__attributes:
             setattr(self, a, None)
@@ -327,6 +327,7 @@ def query_Wikipedia(firstname, lastname):
     soup = BeautifulSoup(person_page.html(), "html.parser")
     
     results = {}
+    results['wikipedia_presence'] = 1
     try:
         # results[''] = re.findall(r'{}\s(\w+)*\s{}'.format(firstname, firstname), soup.text)[0].split(' ')[1]
         middle = re.findall(r'(?:{0}\s+)((\S+\s+){{1,2}})(?:{1})'.format(firstname, lastname), soup.text)[0][0]
