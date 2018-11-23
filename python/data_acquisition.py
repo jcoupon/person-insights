@@ -38,19 +38,16 @@ class Person(object):
             'firstname', 'lastname', 'middlename',
             'nationality', 'domicile', 'birth_date',
             'famous', 'famous_comment', 'profession',
-            'wealth',  'info']
+            'wealth',  'info', 'linkedin_followers']
+
+        for a in self.__attributes:
+            setattr(self, a, None)
 
         self.firstname = firstname
         self.lastname = lastname
         self.middlename = middlename
         self.nationality = nationality
         self.domicile = domicile
-        self.birth_date = None
-        self.famous = None
-        self.famous_comment = None
-        self.profession = None
-        self.wealth = None
-        self.info = None
 
         # web driver for crawling
         if driver is None:
@@ -82,6 +79,25 @@ class Person(object):
     def get_info_from_Wikipedia(self):
 
         result = query_Wikipedia(self.firstname, self.lastname)
+
+        # fill in attribute wherever 
+        # something was found
+        for a in self.__attributes:
+            try:
+                setattr(self, a, result[a])
+            except:
+                continue    
+
+        return
+
+
+
+    def get_info_from_LinkedIn(self):
+
+        search_str = ' '.join([self.firstname, self.lastname])
+
+        result = crawl_linkedin(
+            self.__driver, search_str)
 
         # fill in attribute wherever 
         # something was found
@@ -271,7 +287,6 @@ def query_Wikipedia(firstname, lastname):
     except:
         return {}
 
-        
     soup = BeautifulSoup(person_page.html(), "html.parser")
     
     results = {}
@@ -304,6 +319,65 @@ def query_Wikipedia(firstname, lastname):
 
     return results
 
+
+def crawl_linkedin(driver, search_str):
+    """Crawl LinkedIn.com """
+
+    base_url='https://www.linkedin.com/search/results/all/?keywords='
+    driver.get(base_url+urllib.parse.quote(search_str))
+
+    # click on green button
+    success = persistent_find(
+        driver, "//a[@class='search-result__result-link search-result__result-link--visited ember-view']",
+        click=True)
+
+    results = {}
+    try:
+        followers = persistent_find(
+            driver, "//span[@class='align-self-center pv-recent-activity-section__follower-count pv-recent-activity-section__follower-count--text pr2 mr2']")
+        results['linkedin_followers'] = int(''.join(re.findall(r'\d+', followers)))
+    except:
+        pass
+
+    try:
+        # get the last string as country, 
+        # chop off blank space at the beginning 
+        country_name = persistent_find(driver, '//h3').split(',')[-1][1:]
+        results['domicile'] = pycountry.countries.get(name = country_name).alpha_3
+    except:
+        pass
+
+    profession = None
+    try:
+
+        profession = persistent_find(driver, '//h2')
+        #profession = driver.find_element_by_tag_name('h2').text
+        results['profession'] = profession
+    except:
+        pass
+
+    try:
+        #experiences = persistent_find(driver,
+        #    "//ul[@class='pv-profile-section__section-info section-info pv-profile-section__section-info--has-more']//h3", 
+        #    text=False)
+        
+        # TODO: when several experiences in the 
+        # same company
+        
+        experiences = persistent_find(
+            driver, 
+            "//div[@id='oc-background-section']//h3", 
+            text=False)
+
+        roles = []
+        for experience in experiences:
+            roles.append(experience.text)
+        results['profession'] = ','.join(roles[:3])
+
+    except:
+        pass
+
+    return results
 
 
 def persistent_find(driver, xpath_element, click=False, text=True, verbose=False, n_retries=5):
