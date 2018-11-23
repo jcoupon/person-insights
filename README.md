@@ -47,9 +47,9 @@ Data sources, Data environment
 
 
 wikipedia_presence
-Google_search_narticles
-Google_news_narticles
-Financial_news_narticles
+Google_search_nresults
+Google_news_nresults
+Financial_news_nresults
 
 - Wikipedia: Use Wikipedia API with Python package.
 - Twitter: number of followers

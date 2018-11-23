@@ -447,7 +447,6 @@ def query_Twitter(search_str):
 
 
 
-
 def persistent_find(driver, xpath_element, click=False, text=True, verbose=False, n_retries=5):
     """ Find the element content by retrying a couple of time"""
 
