@@ -40,14 +40,15 @@ Data sources, Data environment
 - Swiss public employees
 - Glassdoor salary from LinkedIn profession
 - Panama papers
-- Polititians: public tax declararion in France, Switzerland, US
+- Politicians: public tax declararion in France, Switzerland, US
+- actors/IMBD artist's fee
 
 ### Public exposure
 
 - Wikipedia: Use Wikipedia API with Python package.
+- Twitter: number of followers
 - startpage: number of results
 - news website (BBC, New York Times)
-- Twitter: number of followers
 - blogs
 
 ### Other info

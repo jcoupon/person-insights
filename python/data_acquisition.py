@@ -9,9 +9,11 @@ import pickle
 
 import time
 import urllib
+import wikipedia
 import pycountry
 from datetime import date
 from bs4 import BeautifulSoup
+
 
 """
 
@@ -59,8 +61,27 @@ class Person(object):
     def get_info_from_Forbes(self):
 
         search_str = ' '.join([self.firstname, self.lastname])
+
         result = crawl_Forbes(
-            self.__driver, search_str)
+            self.__driver, search_str, source='billionaires')
+        if not result:
+            result = crawl_Forbes(
+                self.__driver, search_str, source='powerful')
+
+        # fill in attribute wherever 
+        # something was found
+        for a in self.__attributes:
+            try:
+                setattr(self, a, result[a])
+            except:
+                continue    
+
+        return
+
+
+    def get_info_from_Wikipedia(self):
+
+        result = query_Wikipedia(self.firstname, self.lastname)
 
         # fill in attribute wherever 
         # something was found
@@ -136,8 +157,10 @@ def crawl_Forbes(driver, search_str, source='billionaires'):
 
     base_url = None
     if source == 'billionaires':
+        sys.stdout.write('Billionaires list')
         base_url = 'https://www.forbes.com/billionaires/list/#version:realtime_search:'
     if source == 'powerful':
+        sys.stdout.write('Most powerful people list')
         base_url = 'https://www.forbes.com/powerful-people/list/#tab:overall_search:'
     
     driver.get(base_url+urllib.parse.quote(search_str))
@@ -175,10 +198,11 @@ Forbes.com website was not crawled. Please rerun\n')
         "//tbody[@id='list-table-body']//a[@class='exit_trigger_set']", 
         click=True, verbose=True)
 
+
     if not success:
         sys.stdout.write('The Forbes.com crawling failed. \
-The person might not exist in the Billionaires ranking. \
-Or if you suspect this is a crawling issue, rerun with \'headless\'=False to debug.\n')
+The person might not exist in the {} ranking. \
+Or if you suspect this is a crawling issue, rerun with \'headless\'=False to debug.\n'.format(source))
 
         return None
 
@@ -233,6 +257,53 @@ Or if you suspect this is a crawling issue, rerun with \'headless\'=False to deb
     sys.stdout.write('Crawling Forbes.com: end\n')
   
     return result
+
+
+def query_Wikipedia(firstname, lastname):
+    """Query Wikipedia through its API."""
+
+    search_str = ' '.join([firstname, lastname])
+
+    wikipedia.set_lang("en")
+
+    try:
+        person_page = wikipedia.page(search_str)
+    except:
+        return {}
+
+        
+    soup = BeautifulSoup(person_page.html(), "html.parser")
+    
+    results = {}
+    try:
+        # results[''] = re.findall(r'{}\s(\w+)*\s{}'.format(firstname, firstname), soup.text)[0].split(' ')[1]
+        middle = re.findall(r'(?:{0}\s+)((\S+\s+){{1,2}})(?:{1})'.format(firstname, lastname), soup.text)[0][0]
+        if 'and' not in middle.split(' '):
+            results['middlename'] = middle
+    
+    except:
+        pass
+    try:
+        results['birth_date'] = soup.find('span',  {'class': 'bday'}).text
+    except:
+        pass
+
+    try:
+        results['profession'] = soup.find('td',  {'class': 'role'}).text
+    except:
+        pass
+
+    try:
+        results['info'] = wikipedia.summary(search_str)
+    except:
+        pass
+
+    # TODO look for nationality and domicile
+    # results['nationality']
+    # results['domicile']
+
+    return results
+
 
 
 def persistent_find(driver, xpath_element, click=False, text=True, verbose=False, n_retries=5):
