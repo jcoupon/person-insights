@@ -21,6 +21,7 @@ TODOs:
 - creates a list of famous/unknown people (100/100?) to build a model
 - see for most powerful people from Wikipedia or Forbes
 - add a age/year of birth date
+- create a person class (and store data origin)
 
 
 
@@ -30,14 +31,36 @@ Goals, questions, KPIs## Data acquisition
 
 Data sources, Data environment
 
-### Forbes
+### Weatlh
 
-Use selenium and [Chrome headless](https://intoli.com/blog/running-selenium-with-headless-chrome/) to crawl the Forbes website.
+- Forbes (use selenium and [Chrome headless](https://intoli.com/blog/running-selenium-with-headless-chrome/) to crawl the Forbes website).
+- https://www.wealthx.com/approach/wealth-x-dossier/
+- build a correlation Company wealth/CEO wealth (get CEO info from LinkedIn)
+- youTube/Facebook/Instagram stars
+- Swiss public employees
+- Glassdoor salary from LinkedIn profession
+- Panama papers
+- Polititians: public tax declararion in France, Switzerland, US
 
+### Public exposure
+
+- Wikipedia: Use Wikipedia API with Python package.
+- startpage: number of results
+- news website (BBC, New York Times)
+- Twitter: number of followers
+- blogs
+
+### Other info
+
+- LinkedIn (via Google?), profession, experience, number of followers
+- Google, Wikipedia
+- white pages API
 
 ## Data understanding
 
 Cleansing, Exploration## Modelling
+
+- create a mock sample
 
 (for famous / politically exposed)## Deployment proposal
 
