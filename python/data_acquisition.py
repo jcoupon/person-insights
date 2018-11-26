@@ -546,7 +546,6 @@ def crawl_Google_search(driver, search_str):
 
     sys.stdout.write('Crawling google.com: start.\n')
 
-
     results = {}
 
     # all
