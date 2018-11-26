@@ -2,7 +2,7 @@ country,firstname,lastname,country_code
 Afghanistan,Ashraf,Ghani,AFG
 Albania,Ilir,Meta,ALB
 Algeria,Abdelaziz,Bouteflika,DZA
-Andorra,Joan,Enric Vives SiciliaCo-Prince's Representative ,AND
+Andorra,Joan,Enric Vives Sicilia,AND
 Angola,Joao,Lourenco,AGO
 Antigua and Barbuda,Elizabeth,IIGovernor-General ,ATG
 Argentina,Mauricio,Macri,ARG
@@ -97,7 +97,7 @@ Kenya,Uhuru,Kenyatta,KEN
 Kiribati,Taneti,Mamau,KIR
 Kuwait,Sheikh,Sabah Al-Ahmad Al-Jaber Al-Sabah,KWT
 Kyrgyzstan,Sooronbay,Jeenbekov,KGZ
-Laos,Bounnhang,Vorachith,
+Lao People's Democratic Republic,Bounnhang,Vorachith,LAO
 ,,,
 Latvia,Raimonds,Vejonis,LVA
 Lebanon,Michel,Aoun,LBN
@@ -108,7 +108,7 @@ Liechtenstein,Hans-Adam,II,LIE
 ,,,
 Lithuania,Dalia,Grybauskaite,LTU
 Luxembourg,Henri,,LUX
-Macedonia,Gjorge,Ivanov,
+"Macedonia, Republic of",Gjorge,Ivanov,MKD
 Madagascar,Rivo,Rakotovao,MDG
 Malawi,Peter,Mutharika,MWI
 Malaysia,Muhammad,V,MYS
@@ -120,8 +120,8 @@ Mauritania,Mohamed,Ould Abdel Aziz,MRT
 Mauritius,Barlen,Vyapoory,MUS
 Mexico,Enrique,Pena Nieto,MEX
 ,,,
-Micronesia,Peter,M. Christian,
-Moldova,Igor,Dodon,
+"Micronesia, Federated States of",Peter,M. Christian,FSM
+"Moldova, Republic of",Igor,Dodon,MDA
 Monaco,Albert,II,MCO
 Mongolia,Khaltmaagiin,Battulga,MNG
 Montenegro,Milo,Dukanovic,MNE
@@ -136,13 +136,13 @@ New Zealand,Elizabeth,IIGovernor-General ,NZL
 Nicaragua,Daniel,Ortega,NIC
 Niger,Mahamadou,Issoufou,NER
 Nigeria,Muhammadu,Buhari,NGA
-North Korea,Kim,Jong-un,
+Korea (Democratic People's Republic of),Kim,Jong-un,
 ,,,
 Norway,Harald,V,NOR
 Oman,Qaboos,bin Said al Said,OMN
 Pakistan,Arif,Alvi,PAK
 Palau,Thomas,Remengesau Jr.,PLW
-Palestine,Mahmoud,Abbas,
+"Palestine, State of",Mahmoud,Abbas,PSE
 Panama,Juan,Carlos Varela,PAN
 Papua New Guinea,Elizabeth,IIGovernor-General ,PNG
 Paraguay,Mario,Abdo Benitez,PRY
@@ -152,7 +152,7 @@ Poland,Andrzej,Duda,POL
 Portugal,Marcelo,Rebelo de Sousa,PRT
 Qatar,Sheikh,Tamim bin Hamad Al Thani,QAT
 Romania,Klaus,Iohannis,ROU
-Russia,Vladimir,Putin,
+Russian Federation,Vladimir,Putin,RUS
 Rwanda,Paul,Kagame,RWA
 Saint Kitts and Nevis,Elizabeth,IIGovernor-General ,KNA
 Saint Lucia,Elizabeth,IIGovernor-General ,LCA
@@ -160,7 +160,7 @@ Saint Vincent and the Grenadines,Elizabeth,IIGovernor-General ,VCT
 Samoa,Va'aletoa,Sualauvi II,WSM
 San Marino,Mirko,Tomassoni,SMR
 ,,,
-São Tomé and Príncipe,Evaristo,Carvalho,
+Sao Tome and Principe,Evaristo,Carvalho,STP
 Saudi Arabia,Salman,,SAU
 ,,,
 Senegal,Macky,Sall,SEN
@@ -173,7 +173,7 @@ Slovenia,Borut,Pahor,SVN
 Solomon Islands,Elizabeth,IIGovernor-General ,SLB
 Somalia,Mohamed,Abdullahi Mohamed,SOM
 South Africa,Cyril,Ramaphosa,ZAF
-South Korea,Moon,Jae-in,
+"Korea, Republic of",Moon,Jae-in,KOR
 South Sudan,Salva,Kiir Mayardit,SSD
 Spain,Felipe,VI,ESP
 Sri Lanka,Maithripala,Sirisena,LKA
@@ -184,9 +184,9 @@ Sweden,Carl,XVI Gustaf,SWE
 ,,,
 ,,,
 ,,,
-Syria,Bashar,al-Assad,
+Syrian Arab Republic,Bashar,al-Assad,SYR
 Tajikistan,Emomali,Rahmon,TJK
-Tanzania,John,Magufuli,
+"Tanzania, United Republic of",John,Magufuli,TZA
 Thailand,Maha,Vajiralongkorn,THA
 Togo,Faure,Gnassingbe,TGO
 Tonga,Tupou,VI,TON
@@ -203,9 +203,9 @@ United States,Donald,Trump,USA
 Uruguay,Tabare,Vazquez,URY
 Uzbekistan,Shavkat,Mirziyoyev,UZB
 Vanuatu,Tallis,Obed Moses,VUT
-Vatican City,Pope,Francis,
-Venezuela,Nicolas,Maduro,
-Vietnam,Nguyen,Phu Trong,
+Holy See (Vatican City State),Pope,Francis,VAT
+"Venezuela, Bolivarian Republic of",Nicolas,Maduro,VEN
+Viet Nam,Nguyen,Phu Trong,VNM
 ,,,
 Yemen,Abdrabbuh,Mansur Hadi,YEM
 Zambia,Edgar,Lungu,ZMB
