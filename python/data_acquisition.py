@@ -20,6 +20,19 @@ from datetime import date, datetime, timedelta
 from bs4 import BeautifulSoup
 
 
+# To add: youtube, facebook, Instagram
+ATTRIBUTES = [
+    'firstname', 'lastname', 'middlename',
+    'nationality', 'domicile', 'birth_date',
+    'famous', 'famous_comment', 'profession',
+    'wealth',  'info', 'linkedin_followers',
+    'twitter_followers', 'twitter_verified', 
+    'wikipedia_presence', 'Google_search_nresults',
+    'Google_news_nresults', 'Financial_news_nresults',
+    'nytimes_nresults']
+
+
+
 """
 
 
@@ -42,15 +55,7 @@ class Person(object):
         """
 
         # To add: youtube, facebook, Instagram
-        self.__attributes = [
-            'firstname', 'lastname', 'middlename',
-            'nationality', 'domicile', 'birth_date',
-            'famous', 'famous_comment', 'profession',
-            'wealth',  'info', 'linkedin_followers',
-            'twitter_followers', 'twitter_verified', 
-            'wikipedia_presence', 'Google_search_nresults',
-            'Google_news_nresults', 'Financial_news_nresults',
-            'nytimes_nresults']
+        self.__attributes = ATTRIBUTES
 
         for a in self.__attributes:
             setattr(self, a, None)
@@ -66,6 +71,9 @@ class Person(object):
             self.__driver = launch_browser_driver(headless=True)
         else:
             self.__driver = driver
+
+    def get_attributes(self):
+        return self.__attributes
 
     def get_info_from_Forbes(self):
         """Method to get info from Forbes. 
@@ -163,7 +171,7 @@ class Person(object):
 
         search_str = ' '.join([self.firstname, self.lastname])
 
-        # add quotes to restrict search to 
+        # add quotes to restrict search to
         # exact name
         search_str = '\"'+search_str+'\"'
 
