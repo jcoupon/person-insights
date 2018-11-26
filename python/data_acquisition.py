@@ -6,6 +6,8 @@ import re
 import pandas as pd
 import numpy as np
 import pickle
+
+import requests
 import json
 
 import time
@@ -14,7 +16,7 @@ import wikipedia
 import pycountry
 import tweepy
 
-from datetime import date
+from datetime import date, datetime, timedelta
 from bs4 import BeautifulSoup
 
 
@@ -35,6 +37,8 @@ class Person(object):
         """Initialization
 
         TODO: add corresponding source of info
+
+        For PEP, see https://en.wikipedia.org/wiki/Politically_exposed_person
         """
 
         # To add: youtube, facebook, Instagram
@@ -45,7 +49,8 @@ class Person(object):
             'wealth',  'info', 'linkedin_followers',
             'twitter_followers', 'twitter_verified', 
             'wikipedia_presence', 'Google_search_nresults',
-            'Google_news_nresults', 'Financial_news_nresults']
+            'Google_news_nresults', 'Financial_news_nresults',
+            'nytimes_nresults']
 
         for a in self.__attributes:
             setattr(self, a, None)
@@ -174,6 +179,30 @@ class Person(object):
                 continue    
 
         return
+
+    def get_info_from_nytimes(self):
+        """Method to get info from 
+        the New York Times.
+        
+        An existing API must be used. 
+        See query_nytimes
+        """
+
+        search_str = ' '.join([self.firstname, self.lastname])
+
+        result = query_nytimes(search_str)
+
+        # fill in attribute wherever 
+        # something was found
+        for a in self.__attributes:
+            try:
+                setattr(self, a, result[a])
+            except:
+                continue    
+
+        return
+
+
 
     def print_info(self):
         """Print the person's info
@@ -490,7 +519,7 @@ def crawl_Google_search(driver, search_str):
     
     
     https://moz.com/blog/the-ultimate-guide-to-the-google-search-parameters
-    
+
     """
 
     results = {}
@@ -539,6 +568,47 @@ def get_Google_nresults(driver):
         n = None
 
     return n
+
+def query_nytimes(search_str):
+    """Query new york Times API through 
+    requests to see news visibility.
+
+    Returns number of articles found
+    within one year year:0 to 10.
+    If 10 it means at least 10.
+
+    The path to New York Times API credentials
+    must be given """
+
+    # load credientials
+    with open(os.path.join(os.environ['HOME'], 'credentials', 'nytimes.json')) as file_in:
+        credentials = json.load(file_in)
+
+    # fill in results
+    results = {}
+    try:
+
+        # build url for searching articles
+        base_url = 'https://api.nytimes.com/svc/search/v2/articlesearch.json'
+
+        # add API key
+        url = base_url+'?api-key='+credentials['api-key']
+
+        # add begining date a year ago
+        url += '&begin_date={}'.format((datetime.now() - timedelta(days=365)).strftime('%Y%m%d'))
+
+        # add query string
+        url += '&q='+urllib.parse.quote(search_str)
+
+        # send query
+        response = requests.get(url)
+
+        results['nytimes_nresults'] = len(response.json()['response']['docs'])
+    except:
+        pass
+
+    return results
+
 
 
 def persistent_find(driver, xpath_element, click=False, text=True, verbose=False, n_retries=5):

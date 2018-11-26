@@ -61,6 +61,7 @@ Sources:
 - Financial news: site:bilan.ch OR site:challenges.fr OR site:forbes.com OR site:ft.com OR site:economist.com
 - news website (BBC, New York Times)
 - blogs
+- CIA [worldfactbook](https://www.cia.gov/library/publications/download/)
 
 ### Other info
 
