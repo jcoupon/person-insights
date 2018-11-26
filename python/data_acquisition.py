@@ -153,7 +153,7 @@ class Person(object):
         - the Google search
         - The Google news search
         - and a number of financial news 
-        website via Google        
+        website via Google 
         """
 
         search_str = ' '.join([self.firstname, self.lastname])
@@ -174,7 +174,6 @@ class Person(object):
                 continue    
 
         return
-
 
     def print_info(self):
         """Print the person's info
@@ -487,7 +486,12 @@ def crawl_Google_search(driver, search_str):
     results for :
     - all search
     - news search
-    - and selected financial news site results """
+    - and selected financial news site results 
+    
+    
+    https://moz.com/blog/the-ultimate-guide-to-the-google-search-parameters
+    
+    """
 
     results = {}
 
