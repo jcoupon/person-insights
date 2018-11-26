@@ -542,6 +542,9 @@ def crawl_Google_search(driver, search_str):
     
     https://moz.com/blog/the-ultimate-guide-to-the-google-search-parameters
 
+    See https://developers.google.com/custom-search/v1/overview for payed 
+    API queries
+
     """
 
     sys.stdout.write('Crawling google.com: start.\n')

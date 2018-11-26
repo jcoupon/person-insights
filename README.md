@@ -22,6 +22,7 @@ TODOs:
 - see for most powerful people from Wikipedia or Forbes
 - add a age/year of birth date
 - create a person class (and store data origin)
+- create an option to return wealth in different units
 
 
 
