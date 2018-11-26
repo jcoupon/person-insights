@@ -67,13 +67,16 @@ class Person(object):
         self.domicile = domicile
 
         # web driver for crawling
-        if driver is None:
+        if driver is None and driver is not False:
             self.__driver = launch_browser_driver(headless=True)
         else:
             self.__driver = driver
 
     def get_attributes(self):
         return self.__attributes
+
+    def set_driver(self, driver):
+        self.__driver = driver
 
     def get_info_from_Forbes(self):
         """Method to get info from Forbes. 
@@ -275,10 +278,10 @@ def crawl_Forbes(driver, search_str, source='billionaires'):
 
     base_url = None
     if source == 'billionaires':
-        sys.stdout.write('Billionaires list')
+        sys.stdout.write('Billionaires list.\n')
         base_url = 'https://www.forbes.com/billionaires/list/#version:realtime_search:'
     if source == 'powerful':
-        sys.stdout.write('Most powerful people list')
+        sys.stdout.write('Most powerful people list.\n')
         base_url = 'https://www.forbes.com/powerful-people/list/#tab:overall_search:'
     
     driver.get(base_url+urllib.parse.quote(search_str))
