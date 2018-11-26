@@ -43,7 +43,9 @@ class Person(object):
             'nationality', 'domicile', 'birth_date',
             'famous', 'famous_comment', 'profession',
             'wealth',  'info', 'linkedin_followers',
-            'twitter_followers', 'wikipedia_presence']
+            'twitter_followers', 'twitter_verified', 
+            'wikipedia_presence', 'Google_search_nresults',
+            'Google_news_nresults', 'Financial_news_nresults']
 
         for a in self.__attributes:
             setattr(self, a, None)
@@ -144,7 +146,34 @@ class Person(object):
 
         return
 
+    def get_info_from_Google(self):
+        """Method to get info from Google.
 
+        It will query:
+        - the Google search
+        - The Google news search
+        - and a number of financial news 
+        website via Google        
+        """
+
+        search_str = ' '.join([self.firstname, self.lastname])
+
+        # add quotes to restrict search to 
+        # exact name
+        search_str = '\"'+search_str+'\"'
+
+        result = crawl_Google_search(
+            self.__driver, search_str)
+
+        # fill in attribute wherever 
+        # something was found
+        for a in self.__attributes:
+            try:
+                setattr(self, a, result[a])
+            except:
+                continue    
+
+        return
 
 
     def print_info(self):
@@ -437,15 +466,75 @@ def query_Twitter(search_str):
     users = api.search_users(search_str)
 
     # fill in results
+    # take first result
     results = {}
     try:
-        # take first result
         results['twitter_followers'] = users[0].followers_count
     except:
         pass
 
+    try:
+        results['twitter_verified'] = users[0].verified
+    except:
+        pass
+
+
     return results
 
+
+def crawl_Google_search(driver, search_str):
+    """Send Google search query and get the number of 
+    results for :
+    - all search
+    - news search
+    - and selected financial news site results """
+
+    results = {}
+
+
+    # all
+    base_url = 'http://www.google.com/search?hl=en&q='
+    try:
+        driver.get(base_url+urllib.parse.quote(search_str))
+        results['Google_search_nresults'] = get_Google_nresults(driver)
+    except:
+        pass
+
+    # news
+    base_url = 'http://www.google.com/search?&tbm=nws&hl=en&q='
+    try:
+        driver.get(base_url+urllib.parse.quote(search_str))
+        results['Google_news_nresults'] = get_Google_nresults(driver)
+    except:
+        pass
+
+    sites = ['bilan.ch', 'challenges.fr', 'forbes.com', 'ft.com', 'economist.com']
+    search_str_financial = search_str + ' ' +' OR '.join(['site:'+s for s in sites])
+    try:
+        driver.get(base_url+urllib.parse.quote(search_str_financial))
+        results['Financial_news_nresults'] = get_Google_nresults(driver)
+    except:
+        pass
+    
+    return results
+
+
+def get_Google_nresults(driver):
+    """Return the number of results for a given 
+    Google search"""
+
+    # return None if process throws an error
+    try:
+        # results are stored in the resultStats object
+        resultStats = persistent_find(driver, "//div[@id='resultStats']")
+
+        # remove the last two number that correspond 
+        # to the query speed
+        n = int(''.join(''.join(re.findall(r'\d+', resultStats)[:-2])))
+    except:
+        n = None
+
+    return n
 
 
 def persistent_find(driver, xpath_element, click=False, text=True, verbose=False, n_retries=5):

@@ -45,11 +45,15 @@ Data sources, Data environment
 
 ### Public exposure
 
+Features:
 
-wikipedia_presence
-Google_search_nresults
-Google_news_nresults
-Financial_news_nresults
+- `wikipedia_presence`
+- `Google_search_nresults`
+- `Google_news_nresults`
+- `Financial_news_nresults`
+- `nytimes_nresults`
+
+Sources:
 
 - Wikipedia: Use Wikipedia API with Python package.
 - Twitter: number of followers
