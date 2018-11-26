@@ -374,12 +374,16 @@ def query_Wikipedia(firstname, lastname):
 
     search_str = ' '.join([firstname, lastname])
 
-    wikipedia.set_lang("en")
+    sys.stdout.write('Querying wikipedia.com: start.\n')
 
+
+    wikipedia.set_lang("en")
     try:
         person_page = wikipedia.page(search_str)
     except:
+        sys.stdout.write('Querying wikipedia.com: end (the person was not found).\n')
         return {}
+
 
     soup = BeautifulSoup(person_page.html(), "html.parser")
     
@@ -412,6 +416,8 @@ def query_Wikipedia(firstname, lastname):
     # results['nationality']
     # results['domicile']
 
+    sys.stdout.write('Querying wikipedia.com: end (the person was found).\n')
+
     return results
 
 
@@ -421,10 +427,16 @@ def crawl_linkedin(driver, search_str):
     base_url='https://www.linkedin.com/search/results/all/?keywords='
     driver.get(base_url+urllib.parse.quote(search_str))
 
+    sys.stdout.write('Crawling linkedin.com: start.\n')
+
     # click on green button
     success = persistent_find(
         driver, "//a[@class='search-result__result-link search-result__result-link--visited ember-view']",
         click=True)
+
+    if not success:
+        sys.stdout.write('Crawling linkedin.com: end (the person was not found).\n')
+        return {}
 
     results = {}
     try:
@@ -472,6 +484,8 @@ def crawl_linkedin(driver, search_str):
     except:
         pass
 
+    sys.stdout.write('Crawling linkedin.com: end (the person was found).\n')
+
     return results
 
 def query_Twitter(search_str):
@@ -480,6 +494,8 @@ def query_Twitter(search_str):
     
     The path to Twitter API credentials
     must be given """
+
+    sys.stdout.write('Querying twitter.com: start.\n')
 
     # load credientials
     with open(os.path.join(os.environ['HOME'], 'credentials', 'twitter.json')) as file_in:
@@ -507,6 +523,12 @@ def query_Twitter(search_str):
         pass
 
 
+    if not results:
+        sys.stdout.write('Querying twitter.com: end (the person was not found).\n')
+    else:
+        sys.stdout.write('Querying twitter.com: end (the person was found).\n')
+
+
     return results
 
 
@@ -522,8 +544,10 @@ def crawl_Google_search(driver, search_str):
 
     """
 
-    results = {}
+    sys.stdout.write('Crawling google.com: start.\n')
 
+
+    results = {}
 
     # all
     base_url = 'http://www.google.com/search?hl=en&q='
@@ -548,9 +572,10 @@ def crawl_Google_search(driver, search_str):
         results['Financial_news_nresults'] = get_Google_nresults(driver)
     except:
         pass
-    
-    return results
 
+    sys.stdout.write('Crawling google.com: end.\n')
+
+    return results
 
 def get_Google_nresults(driver):
     """Return the number of results for a given 
@@ -580,6 +605,8 @@ def query_nytimes(search_str):
     The path to New York Times API credentials
     must be given """
 
+    sys.stdout.write('Querying nytimes.com: start.\n')
+
     # load credientials
     with open(os.path.join(os.environ['HOME'], 'credentials', 'nytimes.json')) as file_in:
         credentials = json.load(file_in)
@@ -606,6 +633,8 @@ def query_nytimes(search_str):
         results['nytimes_nresults'] = len(response.json()['response']['docs'])
     except:
         pass
+
+    sys.stdout.write('Querying nytimes.com: end.\n')
 
     return results
 
