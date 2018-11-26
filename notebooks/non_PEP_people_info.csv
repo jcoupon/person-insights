@@ -1,75 +1,75 @@
 firstname,lastname,middlename,nationality,domicile,birth_date,famous,famous_comment,profession,wealth,info,linkedin_followers,twitter_followers,twitter_verified,wikipedia_presence,Google_search_nresults,Google_news_nresults,Financial_news_nresults,nytimes_nresults
-Ixandra,Achitouv,,,,,,,,,,,,,,,,,0
-Ana,Achucarro,,,,,,,,,"Jonathan Mboyo Esole (born February 24, 1977) is an Assistant Professor  of Mathematics at Northeastern University. He works on the geometry of string theory.",,5.0,False,1.0,,,,0
+Ixandra,Achitouv,,,,,,,,,,,,,,2050.0,0.0,,0
+Ana,Achucarro,,,,,,,,,"Jonathan Mboyo Esole (born February 24, 1977) is an Assistant Professor  of Mathematics at Northeastern University. He works on the geometry of string theory.",,5.0,False,1.0,6190.0,5.0,,0
 Julian,Adamek,,,,,,,,,"In cosmology, the cosmological constant problem or vacuum catastrophe is the disagreement between the observed values of vacuum energy density (the small value of the cosmological constant) and theoretical large value of zero-point energy suggested by quantum field theory.
-Depending on the Planck energy cutoff and other factors, the discrepancy is as high as 120 orders of magnitude, a state of affairs described by physicists as ""the largest discrepancy between theory and experiment in all of science"" and ""the worst theoretical prediction in the history of physics.""",,1118.0,False,1.0,,,,0
-Nabila,Aghanim,,,,,,,,,,,,,,,,,0
-Viola,Allevato,,,,,,,,,,,,,,,,,0
-Bruno,Altieri,,,,1930-04-09,,,Scholar and writer,,Maria Luisa Altieri Biagi (9 April 1930 – 29 November 2017) was an Italian scholar and writer.,,25.0,False,1.0,,,,0
-Luca,Amendola,,,,,,,,,"Ferrante Amendola (1664-1724) was an Italian historical painter, active in Naples.",,198.0,False,1.0,,,,0
-Jerome,Amiaux,,,,,,,,,,,,,,,,,0
-Avgoustidis,Anastasios,,,,,,,,,"Catherine Heymans  is a British astrophysicist and Professor at the University of Edinburgh based at the Royal Observatory, Edinburgh.",,,,1.0,,,,0
-Jeremie,Ansart,,,,,,,,,,,,,,,,,0
-Alberto,Anselmi,,,,,,,,,,,593.0,False,,,,,0
-Nikolaos,Apostolakos,,,,,,,,,,,5.0,False,,,,,0
-Philip,Appleton,,,,1782-01-22,,,,,"Philip Hamilton (January 22, 1782 – November 24, 1801) was the eldest child of Alexander Hamilton and Elizabeth Schuyler. He died at the age of 19, fatally shot in a duel with George Eacker at Weehawken, New Jersey.",,11.0,False,1.0,,,,3
+Depending on the Planck energy cutoff and other factors, the discrepancy is as high as 120 orders of magnitude, a state of affairs described by physicists as ""the largest discrepancy between theory and experiment in all of science"" and ""the worst theoretical prediction in the history of physics.""",,1118.0,False,1.0,6360.0,2.0,0.0,0
+Nabila,Aghanim,,,,,,,,,,,,,,45200.0,49.0,,0
+Viola,Allevato,,,,,,,,,,,,,,2500.0,4.0,,0
+Bruno,Altieri,,,,1930-04-09,,,Scholar and writer,,Maria Luisa Altieri Biagi (9 April 1930 – 29 November 2017) was an Italian scholar and writer.,,25.0,False,1.0,36300.0,3570.0,1.0,0
+Luca,Amendola,,,,,,,,,"Ferrante Amendola (1664-1724) was an Italian historical painter, active in Naples.",,198.0,False,1.0,24100.0,189.0,3.0,0
+Jerome,Amiaux,,,,,,,,,,,,,,2740.0,2.0,,0
+Avgoustidis,Anastasios,,,,,,,,,"Catherine Heymans  is a British astrophysicist and Professor at the University of Edinburgh based at the Royal Observatory, Edinburgh.",,,,1.0,1090.0,0.0,,0
+Jeremie,Ansart,,,,,,,,,,,,,,5.0,0.0,,0
+Alberto,Anselmi,,,,,,,,,,,593.0,False,,12800.0,124.0,,0
+Nikolaos,Apostolakos,,,,,,,,,,,5.0,False,,581.0,0.0,,0
+Philip,Appleton,,,,1782-01-22,,,,,"Philip Hamilton (January 22, 1782 – November 24, 1801) was the eldest child of Alexander Hamilton and Elizabeth Schuyler. He died at the age of 19, fatally shot in a duel with George Eacker at Weehawken, New Jersey.",,11.0,False,1.0,15900.0,8.0,1.0,3
 Maria,Archidiacono,,,,,,,,,"Dark radiation (also dark electromagnetism) is a postulated type of radiation that mediates interactions of dark matter.
 By analogy to the way photons mediate electromagnetic interactions between particles in the Standard Model (called baryonic matter  in cosmology), dark radiation is proposed to mediate interactions between dark matter particles. Similar to dark matter particles, the hypothetical dark radiation does not interact with Standard Model particles.
-There has been no notable evidence for the existence of such radiation, but since baryonic matter contains multiple interacting particle types, it is reasonable to suppose that dark matter does also. Moreover, it has been pointed out recently that the cosmic microwave background data seems to suggest that the number of effective neutrino degrees of freedom is more than 3.046, which is slightly more than the standard case for 3 types of neutrino. This extra degree of freedom could arise from having a non-trivial amount of dark radiation in the universe. One possible candidate for dark radiation is the sterile neutrino.",,16.0,False,1.0,,,,0
-Emmanuel,Artis,,,,,,,,,,,5.0,False,,,,,0
-Marika,Asgari,,,,,,,,,,,,,,,,,0
-Thomas,Auphan,,,,,,,,,,,,,,,,,0
-Herve,Aussel,,,,,,,,,,,44.0,False,,,,,0
-Santiago,Avila,,,,,,,,,"Santiago del Tormes is a municipality located in the province of Ávila, Castile and León, Spain. According to the 2004 census (INE), the municipality has a population of 202 inhabitants.",,194.0,False,1.0,,,,2
-Carlo,Baccigalupi,,,,,,,,,,,,,,,,,0
-Andres,Balaguera,,,,,,,,,,,584.0,False,,,,,0
+There has been no notable evidence for the existence of such radiation, but since baryonic matter contains multiple interacting particle types, it is reasonable to suppose that dark matter does also. Moreover, it has been pointed out recently that the cosmic microwave background data seems to suggest that the number of effective neutrino degrees of freedom is more than 3.046, which is slightly more than the standard case for 3 types of neutrino. This extra degree of freedom could arise from having a non-trivial amount of dark radiation in the universe. One possible candidate for dark radiation is the sterile neutrino.",,16.0,False,1.0,4760.0,0.0,,0
+Emmanuel,Artis,,,,,,,,,,,5.0,False,,1970.0,1.0,0.0,0
+Marika,Asgari,,,,,,,,,,,,,,2870.0,0.0,,0
+Thomas,Auphan,,,,,,,,,,,,,,510.0,0.0,,0
+Herve,Aussel,,,,,,,,,,,44.0,False,,6190.0,3.0,,0
+Santiago,Avila,,,,,,,,,"Santiago del Tormes is a municipality located in the province of Ávila, Castile and León, Spain. According to the 2004 census (INE), the municipality has a population of 202 inhabitants.",,194.0,False,1.0,61700.0,801.0,7.0,2
+Carlo,Baccigalupi,,,,,,,,,,,,,,74900.0,53.0,,0
+Andres,Balaguera,,,,,,,,,,,584.0,False,,7950.0,61.0,,0
 Marco,Baldi,,,,1991,,,,,"Alba Berlin, (also Berlin Albatrosse), is a prominent German professional basketball club that is based in Berlin, Germany. The club was founded in 1991, and is today the largest German national basketball club by membership figures. Alba Berlin hosts its home games at the Mercedes-Benz Arena Berlin and competes in the German League and the EuroLeague or the EuroCup.
-After winning eight German Championships, nine German Cups, three German Supercups, and the FIBA Korać Cup in 1995, ALBA Berlin is considered to be the most successful German basketball team, both domestically and internationally. With an average attendance of more than 10,000 fans per game in a season, it is also one of the most popular basketball clubs in Europe. In 2013, ALBA was portrayed in the ESPN documentary series Basketball Capitals.  In 2014, the club was the first German basketball team to beat a reigning NBA champion, the San Antonio Spurs.",,168.0,False,1.0,,,,0
-Mario,Ballardini,,,,,,,,,,,109.0,False,,,,,0
-Philippe,Baratta,,,,1870-11-30,,,,,"Princess Joséphine Marie of Belgium (30 November 1870 — 18 January 1871) was the daughter of Prince Philippe, Count of Flanders, and Princess Marie of Hohenzollern-Sigmaringen. She was the older twin to Princess Henriette of Belgium. In 1872 Joséphine Marie's mother gave birth to another daughter, who was named Joséphine in her memory.",,5.0,False,1.0,,,,0
-Rhys,Barnett,,,,,,,"Politician, writer",,"Juliet Evangeline, Lady Rhys-Williams,  (née  Glyn; 17 December 1898 – 18 September 1964) was a British writer and a Liberal Party politician who later joined the Conservative Party.",,77.0,False,1.0,,,,1
-Alexandre,Barreira,,,,,,,,,,,153.0,False,,,,,0
-James,Bartlett,,,,1996-07-20,,,,,"Martin James Bartlett is an English classical pianist who has twice reached the keyboard finals of the BBC Young Musician of the Year contest, winning the competition in 2014.",,650.0,False,1.0,,,,10
+After winning eight German Championships, nine German Cups, three German Supercups, and the FIBA Korać Cup in 1995, ALBA Berlin is considered to be the most successful German basketball team, both domestically and internationally. With an average attendance of more than 10,000 fans per game in a season, it is also one of the most popular basketball clubs in Europe. In 2013, ALBA was portrayed in the ESPN documentary series Basketball Capitals.  In 2014, the club was the first German basketball team to beat a reigning NBA champion, the San Antonio Spurs.",,168.0,False,1.0,63600.0,4540.0,,0
+Mario,Ballardini,,,,,,,,,,,109.0,False,,3590.0,1.0,0.0,0
+Philippe,Baratta,,,,1870-11-30,,,,,"Princess Joséphine Marie of Belgium (30 November 1870 — 18 January 1871) was the daughter of Prince Philippe, Count of Flanders, and Princess Marie of Hohenzollern-Sigmaringen. She was the older twin to Princess Henriette of Belgium. In 1872 Joséphine Marie's mother gave birth to another daughter, who was named Joséphine in her memory.",,5.0,False,1.0,162.0,0.0,0.0,0
+Rhys,Barnett,,,,,,,"Politician, writer",,"Juliet Evangeline, Lady Rhys-Williams,  (née  Glyn; 17 December 1898 – 18 September 1964) was a British writer and a Liberal Party politician who later joined the Conservative Party.",,77.0,False,1.0,1870.0,0.0,1.0,1
+Alexandre,Barreira,,,,,,,,,,,153.0,False,,19000.0,1260.0,,0
+James,Bartlett,,,,1996-07-20,,,,,"Martin James Bartlett is an English classical pianist who has twice reached the keyboard finals of the BBC Young Musician of the Year contest, winning the competition in 2014.",,650.0,False,1.0,219000.0,1630.0,0.0,10
 Paola,Battaglia,,,,,,,,,"La buona battaglia – Don Pietro Pappagallo is an Italian television miniseries (two-part TV film) based on the true story of Don Pietro Pappagallo (1888–1944), a Catholic priest and Italian anti-fascist who assisted victims of Nazism and Fascism in Rome during World War II and was arrested and executed in the Ardeatine Caves massacre on March 24, 1944.
-It was produced by 11 Marzo Cinematografica and Rai Fiction, directed by Gianfranco Albano, written by Stefano Gabrini and Furio Scarpelli, and stars Flavio Insinna as Don Pietro. It was first released in 2006 and is distributed by Radiotelevisione Italiana and RaiTrade.",,154.0,False,1.0,,,,0
-Fabio,Bellagamba,,,,,,,,,"Skiantos is a comedy punk band from Bologna, Italy, formed in 1975. They have released ten studio albums, two live albums and five compilation albums. They participated in the Gods of Demential festival on January 12, 2007. Roberto “Freak” Antoni, leader of the band, died in Bologna at 59 years of age on February 12, 2014.",,6.0,False,1.0,,,,0
-Karim,Benabed,,,,,,,,,,,1.0,False,,,,,0
+It was produced by 11 Marzo Cinematografica and Rai Fiction, directed by Gianfranco Albano, written by Stefano Gabrini and Furio Scarpelli, and stars Flavio Insinna as Don Pietro. It was first released in 2006 and is distributed by Radiotelevisione Italiana and RaiTrade.",,154.0,False,1.0,15100.0,126.0,1.0,0
+Fabio,Bellagamba,,,,,,,,,"Skiantos is a comedy punk band from Bologna, Italy, formed in 1975. They have released ten studio albums, two live albums and five compilation albums. They participated in the Gods of Demential festival on January 12, 2007. Roberto “Freak” Antoni, leader of the band, died in Bologna at 59 years of age on February 12, 2014.",,6.0,False,1.0,2980.0,7.0,,0
+Karim,Benabed,,,,,,,,,,,1.0,False,,46000.0,10.0,,0
 Ralf,Bender,,,,1989-04-27,,,"
-Defensive midfielder / Centre-back",,Sven Bender (German pronunciation: [ˈsvɛn ˈbɛndɐ]; born 27 April 1989) is a German footballer who plays as a  defensive midfielder and central defender for Bundesliga club Bayer Leverkusen. He was raised in Brannenburg and started his football career playing for TSV Brannenburg. Sven is the twin brother of Lars Bender.,,219.0,False,1.0,,,,1
+Defensive midfielder / Centre-back",,Sven Bender (German pronunciation: [ˈsvɛn ˈbɛndɐ]; born 27 April 1989) is a German footballer who plays as a  defensive midfielder and central defender for Bundesliga club Bayer Leverkusen. He was raised in Brannenburg and started his football career playing for TSV Brannenburg. Sven is the twin brother of Lars Bender.,,219.0,False,1.0,43400.0,414.0,,1
 Giampaolo,Benevento,,,,,,,,,"The 2017–18 Serie A (known as the Serie A TIM for sponsorship reasons) was the 116th season of top-tier Italian football, the 86th in a round-robin tournament and the 8th since its organization under a league committee separate from Serie B. Juventus were the six-time defending champions. The season ran from 19 August 2017 to 20 May 2018..
 The season is marred by the death of Davide Astori, the captain of Fiorentina, due to heart problems.
 
-",,,,1.0,,,,0
-Chuck,Bennett,,,,,,,,,"Chuck Bennett (born 1948) is an American politician currently serving as mayor of Salem, Oregon, and is a former state representative.",,2489.0,False,1.0,,,,10
-Christophe,Benoist,,,,,,,,,,,42.0,False,,,,,6
-Francis,Bernardeau,,,,,,,,,,,,,,,,,0
-Laura,Bisigello,,,,,,,,,,,,,,,,,0
-Andrea,Biviano,,,,,,,,,,,34.0,False,,,,,0
+",,,,1.0,336.0,100.0,,0
+Chuck,Bennett,,,,,,,,,"Chuck Bennett (born 1948) is an American politician currently serving as mayor of Salem, Oregon, and is a former state representative.",,2489.0,False,1.0,83900.0,2320.0,32.0,10
+Christophe,Benoist,,,,,,,,,,,42.0,False,,50300.0,348.0,6.0,6
+Francis,Bernardeau,,,,,,,,,,,,,,19200.0,4.0,,0
+Laura,Bisigello,,,,,,,,,,,,,,253.0,0.0,,0
+Andrea,Biviano,,,,,,,,,,,34.0,False,,10100.0,3.0,,0
 Rob,Blake,,,,1969-12-10,,,"
 Defense",,"Robert Bowlby Blake (born December 10, 1969) is a Canadian professional ice hockey executive and former player. He is the current General Manager and Vice-president of the Los Angeles Kings of the National Hockey League (NHL). He was originally drafted by the Kings in 1988, appearing in the 1993 Stanley Cup Finals, winning the James Norris Memorial Trophy and serving as team captain for five seasons in his initial 11-season stint with the club.  In 2001, Blake was traded to the Colorado Avalanche and was a member of their 2001 Stanley Cup championship team. It was his only Stanley Cup as a player, though he won the Cup again as a member of the Kings front office in 2014. After a two-season return to Los Angeles, Blake signed with the Sharks in 2008, retiring as its captain after the 2009–10 season. Four years later, in 2014, Blake was elected into the Hockey Hall of Fame.
-Internationally, Blake played for Team Canada in three consecutive Winter Olympics in 1998, 2002 and 2006, winning gold in 2002 and becoming the eleventh member of the Triple Gold Club.",,1551.0,False,1.0,,,,10
+Internationally, Blake played for Team Canada in three consecutive Winter Olympics in 1998, 2002 and 2006, winning gold in 2002 and becoming the eleventh member of the Triple Gold Club.",,1551.0,False,1.0,265000.0,6690.0,4.0,10
 Alain,Blanchard,,,,,,,,,"Alain Blanchard (born 14th century, executed in Rouen in 1419) was a commander of the crossbowmen of Rouen during the Hundred Years' War.
-He was active in the defence of the city during its siege by king Henry V of England. His habit of hanging English captives from the walls of the city incurred the wrath of the English. When the city capitulated on 20 January 1419 Henry demanded that three notable inhabitants be surrendered to be decapitated. One of them was Alain Blanchard.",,847.0,False,1.0,,,,0
-Linda,Blot,,,,,,,,,,,250.0,False,,,,,2
-Hans,Boehringer,,,,,,,,,"Biberach (German pronunciation: [ˈbiːbəʁax]) is a town in the south of Germany. It is the capital of Biberach district, in the Upper Swabia region of the German state (Land) of Baden-Württemberg. To distinguish it from the other towns of the same name it is called Biberach an der Riss (German: Biberach an der Riß) after the small river Riss which flows through the city (the Riss also gave its name to the Riss glaciation period).",,0.0,False,1.0,,,,0
-Andrea,Bonchi,,,,,,,,,,,10.0,False,,,,,0
-Alexandre,Boucaud,,,,,,,,,,,54.0,False,,,,,0
-Rebecca,Bowler,,,,1873-05-17,,,Novelist and journalist,,"Dorothy Miller Richardson (17 May 1873 – 17 June 1957) was a British author and journalist. Author of Pilgrimage, a sequence of 13 semi-autobiographical novels published between 1915 and 1967—though Richardson saw them as chapters of one work—she was one of the earliest modernist novelists to use  stream of consciousness as a narrative technique. Richardson also emphasizes in Pilgrimage the importance and distinct nature of female experiences. The title Pilgrimage alludes not only to ""the journey of the artist ... to self-realization but, more practically, to the discovery of a unique creative form and expression"".",,678.0,False,1.0,,,,2
-Danny,Boxhoorn,,,,,,,,,,,,,,,,,0
-Enzo,Branchini,,,,,,,,,,,2.0,False,,,,,0
-Malcolm,Bremer,,,,1941-09-30,,,,,"Lewis Paul Bremer III (born September 30, 1941) is an American diplomat. He is best known for leading the Coalition Provisional Authority (CPA), following the 2003 invasion of Iraq by the United States, from May 2003 until June 2004.",,,,1.0,,,,0
-Massimo,Brescia,,,,,,,,,Massimo Cellino (Italian pronunciation: [ˈmasːimo tʃelː'iːno]; born 28 July 1956) is an Italian entrepreneur and football club owner. Through his family trust Eleonora Sport Ltd he was the owner and chairman of the English club Leeds United. He currently owns Brescia Calcio.,,6.0,False,1.0,,,,0
+He was active in the defence of the city during its siege by king Henry V of England. His habit of hanging English captives from the walls of the city incurred the wrath of the English. When the city capitulated on 20 January 1419 Henry demanded that three notable inhabitants be surrendered to be decapitated. One of them was Alain Blanchard.",,847.0,False,1.0,81200.0,579.0,7.0,0
+Linda,Blot,,,,,,,,,,,250.0,False,,2480.0,0.0,0.0,2
+Hans,Boehringer,,,,,,,,,"Biberach (German pronunciation: [ˈbiːbəʁax]) is a town in the south of Germany. It is the capital of Biberach district, in the Upper Swabia region of the German state (Land) of Baden-Württemberg. To distinguish it from the other towns of the same name it is called Biberach an der Riss (German: Biberach an der Riß) after the small river Riss which flows through the city (the Riss also gave its name to the Riss glaciation period).",,0.0,False,1.0,11100.0,2.0,0.0,0
+Andrea,Bonchi,,,,,,,,,,,10.0,False,,236.0,0.0,,0
+Alexandre,Boucaud,,,,,,,,,,,54.0,False,,2480.0,1.0,,0
+Rebecca,Bowler,,,,1873-05-17,,,Novelist and journalist,,"Dorothy Miller Richardson (17 May 1873 – 17 June 1957) was a British author and journalist. Author of Pilgrimage, a sequence of 13 semi-autobiographical novels published between 1915 and 1967—though Richardson saw them as chapters of one work—she was one of the earliest modernist novelists to use  stream of consciousness as a narrative technique. Richardson also emphasizes in Pilgrimage the importance and distinct nature of female experiences. The title Pilgrimage alludes not only to ""the journey of the artist ... to self-realization but, more practically, to the discovery of a unique creative form and expression"".",,678.0,False,1.0,54200.0,9.0,2.0,2
+Danny,Boxhoorn,,,,,,,,,,,,,,727.0,0.0,,0
+Enzo,Branchini,,,,,,,,,,,2.0,False,,21400.0,5.0,,0
+Malcolm,Bremer,,,,1941-09-30,,,,,"Lewis Paul Bremer III (born September 30, 1941) is an American diplomat. He is best known for leading the Coalition Provisional Authority (CPA), following the 2003 invasion of Iraq by the United States, from May 2003 until June 2004.",,,,1.0,10300.0,5.0,0.0,0
+Massimo,Brescia,,,,,,,,,Massimo Cellino (Italian pronunciation: [ˈmasːimo tʃelː'iːno]; born 28 July 1956) is an Italian entrepreneur and football club owner. Through his family trust Eleonora Sport Ltd he was the owner and chairman of the English club Leeds United. He currently owns Brescia Calcio.,,6.0,False,1.0,9240.0,54.0,0.0,0
 Michel Andres,Breton,,,,1896-02-18,,,Writer,,"André Breton (French: [ɑ̃dʁe bʁətɔ̃]; 18 February 1896 – 28 September 1966) was a French writer, poet, and anti-fascist. He is known best as the co-founder, leader, principal theorist and chief apologist of Surrealism. His writings include the first Surrealist Manifesto (Manifeste du surréalisme) of 1924, in which he defined surrealism as ""pure psychic automatism"".
 
-",,,,1.0,,,,1
-Jarle,Brinchmann,,,,,,,,,,,64.0,False,,,,,0
-Margot,Brouwer,,,,,,,,,,,71.0,False,,,,,0
-Hugo,Buddelmeijer,,,,,,,,,,,63.0,False,,,,,0
-Guillermo,Buenadicha,,,,,,,,,,,785.0,False,,,,,0
+",,,,1.0,402.0,0.0,0.0,1
+Jarle,Brinchmann,,,,,,,,,,,64.0,False,,29000.0,68.0,,0
+Margot,Brouwer,,,,,,,,,,,71.0,False,,9900.0,96.0,,0
+Hugo,Buddelmeijer,,,,,,,,,,,63.0,False,,6030.0,1.0,,0
+Guillermo,Buenadicha,,,,,,,,,,,785.0,False,,3300.0,39.0,,0
 Van Tuan,Bui,,,,1987-01-09,,,,,"Nguyễn Tuấn Anh (January 9, 1987 - July 21, 2013), known professionally as WanBi Tuấn Anh, was a Vietnamese singer, musician, actor and model. He won the ""Promising Singer"" of the Làn Sóng Xanh with Thu Thủy in 2009. Wanbi's songs are mainly pop and R&B.
-He was first known as a cover model for teen magazines like VTM, Hoa Học Trò, Mực Tím, Thế Giới Học Đường, and was the exclusive model for fashion brand Jack Cobra. He is also a high-profile show host and starred in many commercials. He has appeared in the television series ""Áo Cưới Thiên Đường"" and the film ""Bóng Ma Học Đường"". He had many hit songs such as ""Đôi Mắt"", ""Cho Em"", ""Vụt Mất"". [1]",,1.0,False,1.0,,,,0
-Joyce,Byun,,,,2005-12-14,,,,,"My Girl (Hangul: 마이걸; RR: Mai Geol) is a 2005 South Korean television series starring Lee Da-hae, Lee Dong-wook, Lee Joon-gi and Park Si-yeon. It aired on SBS from December 14, 2005 to February 2, 2006 on Wednesdays and Thursdays at 21:55 for 16 episodes. The romantic comedy series was a hit during its run—it placed number one in its timeslot and reached a peak viewership rating of 24.9%. It also catapulted actors Lee Da-hae, Lee Dong-wook and Lee Joon-gi into Korean Wave stardom.",,22.0,False,1.0,,,,0
-Remi,Cabanac,,,,,,,,,,,4.0,False,,,,,0
+He was first known as a cover model for teen magazines like VTM, Hoa Học Trò, Mực Tím, Thế Giới Học Đường, and was the exclusive model for fashion brand Jack Cobra. He is also a high-profile show host and starred in many commercials. He has appeared in the television series ""Áo Cưới Thiên Đường"" and the film ""Bóng Ma Học Đường"". He had many hit songs such as ""Đôi Mắt"", ""Cho Em"", ""Vụt Mất"". [1]",,1.0,False,1.0,17600.0,1.0,0.0,0
+Joyce,Byun,,,,2005-12-14,,,,,"My Girl (Hangul: 마이걸; RR: Mai Geol) is a 2005 South Korean television series starring Lee Da-hae, Lee Dong-wook, Lee Joon-gi and Park Si-yeon. It aired on SBS from December 14, 2005 to February 2, 2006 on Wednesdays and Thursdays at 21:55 for 16 episodes. The romantic comedy series was a hit during its run—it placed number one in its timeslot and reached a peak viewership rating of 24.9%. It also catapulted actors Lee Da-hae, Lee Dong-wook and Lee Joon-gi into Korean Wave stardom.",,22.0,False,1.0,2330.0,0.0,,0
+Remi,Cabanac,,,,,,,,,,,4.0,False,,10100.0,5.0,,0
 Peter,Capak,,,,,,,,,,,0.0,False,,,,,0
 Carmelita,Carbone,,,,1961-06,,,,,"Creature from the Haunted Sea is a 1961 horror comedy film directed by Roger Corman. Written by Charles B. Griffith, the film is a parody of spy, gangster, and monster movies (mostly Creature from the Black Lagoon), concerning a secret agent, XK150 (played by Robert Towne under the pseudonym Edward Wain), who goes under the code name ""Sparks Moran"" in order to infiltrate a criminal gang led by Renzo Capetto (Antony Carbone), who is trying to transport a colonel, a group of exiled Cuban nationals, and a large portion of the Cuban treasury out of the country.",,,,1.0,,,,0
 Vincenzo Fabrizio,Cardone,,,,,,,,,,,,,,,,,0
