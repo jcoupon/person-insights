@@ -9,10 +9,10 @@ Steps:
 - query Twitter, number of followers, whether it's a verified account
 - crawl Google search, news and a number of news sites (Financial times, The economist, bilan.ch, challenges.fr)
 - query New York Times API
-- see other [APIs](https://github.com/toddmotto/public-apis)
  
 
 Further improvements:
+- see other [APIs](https://github.com/toddmotto/public-apis)
 - create dictionary to convert country name in 3-letter country code
 - create a model to estimate wealth
 - create an option to return wealth in different units
@@ -30,7 +30,7 @@ driver = data_acquisition.launch_browser_driver(headless=False)
 ```python
 person = data_acquisition.Person('Jeff', 'Bezos', middlename='Preston', driver=driver)
 ```
-```
+```python
 person.print_info()
 ```
 - get info sequentially
@@ -42,16 +42,28 @@ person.get_info_from_Twitter()
 person.get_info_from_Google()
 person.get_info_from_nytimes()
 ```
+- print results
+```python
+person.print_info()
+```
+- run famous people model
+```python
+reload(data_modeling)
+data_modeling.predict_PEP(person)
+```
+- print final information
+```python
+person.print_info()
+```
 
 
 ## Data sources
-
-Data sources, Data environment
-
 ### Weatlh
 
+Below is a list of additional sources of information:
+
 - Forbes (use selenium and [Chrome headless](https://intoli.com/blog/running-selenium-with-headless-chrome/) to crawl the Forbes website).
-- https://www.wealthx.com/approach/wealth-x-dossier/
+- another [source](https://www.wealthx.com/approach/wealth-x-dossier/) of wealth information
 - build a correlation Company wealth/CEO wealth (get CEO info from LinkedIn)
 - youTube/Facebook/Instagram stars
 - Swiss public employees
@@ -85,13 +97,3 @@ Sources:
 - LinkedIn (via Google?), profession, experience, number of followers
 - Google, Wikipedia
 - white pages API
-
-## Data understanding
-
-Cleansing, Exploration## Modelling
-
-- create a mock sample
-
-(for famous / politically exposed)## Deployment proposal
-
-System components to make available your insights to our CRM
