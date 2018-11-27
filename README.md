@@ -1,34 +1,50 @@
 # Person insights
 
-A python search engine to recover public information on a person from a number of sources.
+This module is a python search engine to recover public information on a person from a number of sources.
 
 Steps:
-
 - query Forbes and craw to get info (selenium)
-- query Wikipedia API (make sure it is a person) flag if not present, record first paragraph if present
-- query LinkedIn API
-- query news sites (New York Times, bilan.ch) and Twitter: number of articles, most recent
-- query search engine result (see https://pypros.com/search-engine-python/)
+- query Wikipedia API, flag if present, scrape info and get summary if present
+- query LinkedIn API, get profession and past experiences
+- query Twitter, number of followers, whether it's a verified account
+- crawl Google search, news and a number of news sites (Financial times, The economist, bilan.ch, challenges.fr)
+- query New York Times API
 - see other [APIs](https://github.com/toddmotto/public-apis)
-
  
 
-TODOs:
-
+Further improvements:
 - create dictionary to convert country name in 3-letter country code
-- modules "Forbes", "Wikipedia APIs", "LinkedIn API"
-- if nothing returned, crawl Google
-- creates a list of famous/unknown people (100/100?) to build a model
-- see for most powerful people from Wikipedia or Forbes
-- add a age/year of birth date
-- create a person class (and store data origin)
+- create a model to estimate wealth
 - create an option to return wealth in different units
 
 
+## How to use it
 
-## Business understanding
+See `notebook/search engine.ipynb` for more details. The current workflow is the following:
 
-Goals, questions, KPIs## Data acquisition
+- Launch web driver with window to control behavior:
+```python
+driver = data_acquisition.launch_browser_driver(headless=False)
+```
+- create person object (info will contain only firstname and lastname):
+```python
+person = data_acquisition.Person('Jeff', 'Bezos', middlename='Preston', driver=driver)
+```
+```
+person.print_info()
+```
+- get info sequentially
+```python
+person.get_info_from_Forbes()
+person.get_info_from_Wikipedia()
+person.get_info_from_LinkedIn()
+person.get_info_from_Twitter()
+person.get_info_from_Google()
+person.get_info_from_nytimes()
+```
+
+
+## Data sources
 
 Data sources, Data environment
 
