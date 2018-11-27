@@ -2,6 +2,8 @@
 
 This module is a python search engine to recover public information on a person from a number of sources.
 
+In order to use it, it is required to register a [Twitter API key](https://apps.twitter.com), a [LinkedIn account](http://linkedin.com/) and a [New York Times API key](https://developer.nytimes.com) (see code for more information).
+
 Steps:
 
 - query Forbes and craw to get info (selenium)
