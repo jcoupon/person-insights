@@ -3,13 +3,15 @@
 This module is a python search engine to recover public information on a person from a number of sources.
 
 Steps:
+
 - query Forbes and craw to get info (selenium)
 - query Wikipedia API, flag if present, scrape info and get summary if present
 - query LinkedIn API, get profession and past experiences
 - query Twitter, number of followers, whether it's a verified account
 - crawl Google search, news and a number of news sites (Financial times, The economist, bilan.ch, challenges.fr)
 - query New York Times API
- 
+- build a model to predict if person is famous/politically exposed mainly from online presence
+- apply model and record probability
 
 Further improvements:
 - see other [APIs](https://github.com/toddmotto/public-apis)
