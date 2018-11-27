@@ -6,7 +6,7 @@ In order to use it, it is required to register a [Twitter API key](https://apps.
 
 Steps:
 
-- query Forbes and craw to get info (selenium)
+- query Forbes and crawl to get info (selenium)
 - query Wikipedia API, flag if present, scrape info and get summary if present
 - query LinkedIn API, get profession and past experiences
 - query Twitter, number of followers, whether it's a verified account
